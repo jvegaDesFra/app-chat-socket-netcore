@@ -1,0 +1,13 @@
+D:\projects\qintek-chat-socket\qintek-chat-bd\bin\Release\netcoreapp3.1\qintek-chat-bd.deps.json
+D:\projects\qintek-chat-socket\qintek-chat-bd\bin\Release\netcoreapp3.1\qintek-chat-bd.runtimeconfig.json
+D:\projects\qintek-chat-socket\qintek-chat-bd\bin\Release\netcoreapp3.1\qintek-chat-bd.runtimeconfig.dev.json
+D:\projects\qintek-chat-socket\qintek-chat-bd\bin\Release\netcoreapp3.1\qintek-chat-bd.dll
+D:\projects\qintek-chat-socket\qintek-chat-bd\bin\Release\netcoreapp3.1\qintek-chat-bd.pdb
+D:\projects\qintek-chat-socket\qintek-chat-bd\obj\Release\netcoreapp3.1\qintek-chat-bd.csproj.AssemblyReference.cache
+D:\projects\qintek-chat-socket\qintek-chat-bd\obj\Release\netcoreapp3.1\qintek-chat-bd.GeneratedMSBuildEditorConfig.editorconfig
+D:\projects\qintek-chat-socket\qintek-chat-bd\obj\Release\netcoreapp3.1\qintek-chat-bd.AssemblyInfoInputs.cache
+D:\projects\qintek-chat-socket\qintek-chat-bd\obj\Release\netcoreapp3.1\qintek-chat-bd.AssemblyInfo.cs
+D:\projects\qintek-chat-socket\qintek-chat-bd\obj\Release\netcoreapp3.1\qintek-chat-bd.csproj.CoreCompileInputs.cache
+D:\projects\qintek-chat-socket\qintek-chat-bd\obj\Release\netcoreapp3.1\qintek-chat-bd.dll
+D:\projects\qintek-chat-socket\qintek-chat-bd\obj\Release\netcoreapp3.1\qintek-chat-bd.pdb
+D:\projects\qintek-chat-socket\qintek-chat-bd\obj\Release\netcoreapp3.1\qintek-chat-bd.genruntimeconfig.cache

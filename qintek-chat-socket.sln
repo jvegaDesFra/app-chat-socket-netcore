@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32929.386
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "qintek-chat-socket", "qintek-chat-socket\qintek-chat-socket.csproj", "{662852C2-46AA-4BB6-B017-88E1C4DEDE62}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "qintek-chat-bd", "qintek-chat-bd\qintek-chat-bd.csproj", "{4D963A3F-E8B4-401E-B3E0-28ECAC0B5F0E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{662852C2-46AA-4BB6-B017-88E1C4DEDE62}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{662852C2-46AA-4BB6-B017-88E1C4DEDE62}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{662852C2-46AA-4BB6-B017-88E1C4DEDE62}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{662852C2-46AA-4BB6-B017-88E1C4DEDE62}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D963A3F-E8B4-401E-B3E0-28ECAC0B5F0E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D963A3F-E8B4-401E-B3E0-28ECAC0B5F0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D963A3F-E8B4-401E-B3E0-28ECAC0B5F0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D963A3F-E8B4-401E-B3E0-28ECAC0B5F0E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F060FBA6-A0F4-40BC-AA41-8FC89BDB5499}
+	EndGlobalSection
+EndGlobal
