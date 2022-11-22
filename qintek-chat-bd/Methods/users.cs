@@ -57,6 +57,30 @@ namespace qintek_chat_bd.Methods
 
             return response;
         }
+        public static void markReaded(int userid, Guid group)
+        {
+            try
+            {
+                using (var context = new LibraryContext())
+                {
+
+
+
+                    var messageUnread = context.messages.Where(x => x.group == group && x.userID == userid && x.readed == false).ToList();
+
+                    messageUnread.ForEach(x => x.readed = true);
+                    context.SaveChanges();
+                
+
+
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
         public static Models.resultUnread GetUnreadMessageByGroup(int userid, Guid group)
         {
             Models.resultUnread resultado = new Models.resultUnread();
@@ -75,12 +99,12 @@ namespace qintek_chat_bd.Methods
                     {
                         userIDTo = toUser.userID_A;
                     }
-                    var messageUnread = context.messages.Where(x => x.group == group && x.userID == userid).ToList();
+                    var messageUnread = context.messages.Where(x => x.group == group && x.userID == userid && x.readed == false).ToList();
                     var user = context.users.Where(x => x.id == userid).FirstOrDefault();
 
                     resultado.userId = userid;
                     resultado.unread = messageUnread.Count;
-                    resultado.cnnID = user.connectionId;
+                    //resultado.cnnID = user.connectionId;
 
             
                 }

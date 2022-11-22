@@ -20,15 +20,15 @@ namespace qintek_chat_socket.Hubs
         {
             string logeado = "";
 
-           // Clients.All.SendAsync("UserList", qintek_chat_bd.Methods.users.GetUser(0));
+            Clients.All.SendAsync("UserList", qintek_chat_bd.Methods.users.GetUser(0));
 
             return base.OnConnectedAsync();
         }
 
         public override Task OnDisconnectedAsync(Exception exception)
         {
-          //  qintek_chat_bd.Methods.users.RemoveUser(Context.ConnectionId);
-           // Clients.All.SendAsync("UserList", qintek_chat_bd.Methods.users.GetUser(0));
+           qintek_chat_bd.Methods.users.RemoveUser(Context.ConnectionId);
+           Clients.All.SendAsync("UserList", qintek_chat_bd.Methods.users.GetUser(0));
 
             string desconectado = Context.ConnectionId;
             return base.OnDisconnectedAsync(exception);
@@ -40,11 +40,27 @@ namespace qintek_chat_socket.Hubs
 
             qintek_chat_bd.Models.groups group = qintek_chat_bd.Methods.groups.setGroup(userLogeado, userChat);
 
-            var result = qintek_chat_bd.Methods.users.GetUnreadMessageByGroup(userLogeado, group.grupo);
+            var result = qintek_chat_bd.Methods.users.GetUnreadMessageByGroup(userChat, group.grupo);
 
-            await Clients.Client(result.cnnID).SendAsync("GetUnreadMessages", result);
+            await Clients.Client(Context.ConnectionId).SendAsync("GetUnreadMessages", result);
 
         }
+
+
+        public async Task GetUsersByUser(int userId)
+        {
+            var usersLogeados = qintek_chat_bd.Methods.users.GetUser(userId);
+
+            foreach (var user in usersLogeados)
+            {
+                qintek_chat_bd.Models.groups group = qintek_chat_bd.Methods.groups.setGroup(userId, user.id);
+                await Groups.AddToGroupAsync(Context.ConnectionId, group.grupo.ToString());
+                  await Clients.Group(group.grupo.ToString()).SendAsync("NewUser", qintek_chat_bd.Methods.users.GetUserByID(userId));
+                //await Clients.Client(Context.ConnectionId).SendAsync("NewUser", qintek_chat_bd.Methods.users.GetUserByID(userId));
+
+            }
+        }
+
         // cuando se agrega el usuario, se envian a todos los usuarios conectados que existe un nuevo inicio de sesion
         public async Task AddUser(int userId, string name, string nick)
         {
@@ -52,16 +68,19 @@ namespace qintek_chat_socket.Hubs
 
             if (agregado != null)
             {
-                var usersLogeados = qintek_chat_bd.Methods.users.GetUser(userId);
-
-                foreach (var user in usersLogeados)
-                {
-                    qintek_chat_bd.Models.groups group = qintek_chat_bd.Methods.groups.setGroup(userId, user.id);
-                    await Groups.AddToGroupAsync(Context.ConnectionId, group.grupo.ToString());
-                    await Clients.Client(agregado.connectionId).SendAsync("NewUser", qintek_chat_bd.Methods.users.GetUserByID(userId));
-
-                }
+                
+                // var usersLogeados = qintek_chat_bd.Methods.users.GetUser(0);
+                //
+                // foreach (var user in usersLogeados)
+                // {
+                //     qintek_chat_bd.Models.groups group = qintek_chat_bd.Methods.groups.setGroup(userId, user.id);
+                //     await Groups.AddToGroupAsync(Context.ConnectionId, group.grupo.ToString());
+                //   //  await Clients.Group(group.grupo.ToString()).SendAsync("NewUser", qintek_chat_bd.Methods.users.GetUserByID(userId));
+                //     await Clients.Client(user.connectionId).SendAsync("NewUser", qintek_chat_bd.Methods.users.GetUserByID(userId));
+                //
+                // }
             }
+            await Clients.Client(Context.ConnectionId).SendAsync("AddUserCompleted", qintek_chat_bd.Methods.users.GetUserByID(userId));
         }
 
         public async Task JoinGroup(int userIdA, int userIdB)
@@ -75,6 +94,16 @@ namespace qintek_chat_socket.Hubs
 
             await Clients.Client(Context.ConnectionId).SendAsync("GetMessages", qintek_chat_bd.Methods.messages.getMessages(group.grupo));
 
+            qintek_chat_bd.Methods.users.markReaded(userIdB, group.grupo);
+
+            var result = qintek_chat_bd.Methods.users.GetUnreadMessageByGroup(userIdB, group.grupo);
+
+           //marcar como leidos
+
+            
+
+            await Clients.Client(Context.ConnectionId).SendAsync("GetUnreadMessages", result);
+
         }
 
         public async Task LeaveGroup(string groupName, string userName)
@@ -86,7 +115,7 @@ namespace qintek_chat_socket.Hubs
         public async Task SendMessage(string group, int userID, string message)
         {
             qintek_chat_bd.Models.messages ms = qintek_chat_bd.Methods.messages.addMessage(new Guid(group), userID, message);
-            qintek_chat_bd.Methods.users.UpdateMessageUnread(userID, new Guid(group));
+            //qintek_chat_bd.Methods.users.UpdateMessageUnread(userID, new Guid(group));
 
             await Clients.Group(group).SendAsync("NewMessage", ms);
         }
