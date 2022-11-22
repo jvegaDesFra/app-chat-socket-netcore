@@ -20,7 +20,7 @@ namespace qintek_chat_socket.Hubs
         {
             string logeado = "";
 
-            Clients.All.SendAsync("UserList", qintek_chat_bd.Methods.users.GetUser(0));
+           // Clients.All.SendAsync("UserList", qintek_chat_bd.Methods.users.GetUser(0));
 
             return base.OnConnectedAsync();
         }
@@ -48,9 +48,7 @@ namespace qintek_chat_socket.Hubs
         // cuando se agrega el usuario, se envian a todos los usuarios conectados que existe un nuevo inicio de sesion
         public async Task AddUser(int userId, string name, string nick)
         {
-            var agregado = qintek_chat_bd.Methods.users.AddUser(userId, name, nick, Context.ConnectionId);
-
-            
+            var agregado = qintek_chat_bd.Methods.users.AddUser(userId, name, nick, Context.ConnectionId);            
 
             if (agregado != null)
             {
@@ -63,15 +61,8 @@ namespace qintek_chat_socket.Hubs
                     await Clients.Client(agregado.connectionId).SendAsync("NewUser", qintek_chat_bd.Methods.users.GetUserByID(userId));
 
                 }
-
-               
-
-                
             }
-
         }
-
-
 
         public async Task JoinGroup(int userIdA, int userIdB)
         {
