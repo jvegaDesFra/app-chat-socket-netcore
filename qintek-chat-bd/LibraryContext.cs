@@ -13,8 +13,8 @@ namespace qintek_chat_bd
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             //optionsBuilder.UseMySQL("server=208.91.199.11;database=v-pos-auth;user=jvega2892UsA;password=$$$Alzdti503");
-            //optionsBuilder.UseMySQL("server=localhost;database=qintek-chat;user=root;password=");
-            optionsBuilder.UseMySQL("server=localhost;database=qintek_chat;user=QinTekChat;password=QinTekChat2022$");
+            optionsBuilder.UseMySQL("server=192.168.1.203;database=qintek-chat;user=root;password=Vega2892");
+           // prod optionsBuilder.UseMySQL("server=localhost;database=qintek_chat;user=QinTekChat;password=QinTekChat2022$");
         }
     }
 }

@@ -9,8 +9,8 @@ using qintek_chat_bd;
 namespace qintek_chat_bd.Migrations
 {
     [DbContext(typeof(LibraryContext))]
-    [Migration("20221013172838_initial")]
-    partial class initial
+    [Migration("20221214102148_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -56,6 +56,9 @@ namespace qintek_chat_bd.Migrations
                     b.Property<string>("message")
                         .HasColumnType("text");
 
+                    b.Property<bool>("readed")
+                        .HasColumnType("tinyint(1)");
+
                     b.Property<int>("userID")
                         .HasColumnType("int");
 
@@ -78,6 +81,9 @@ namespace qintek_chat_bd.Migrations
                         .HasColumnType("timestamp");
 
                     b.Property<int>("id")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("messages")
                         .HasColumnType("int");
 
                     b.Property<string>("name")

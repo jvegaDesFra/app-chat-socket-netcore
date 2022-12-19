@@ -51,7 +51,7 @@ namespace qintek_chat_socket
                     .AllowAnyMethod()
                     .AllowCredentials()
                     .AllowAnyOrigin()
-                    .WithOrigins("http://localhost:4200", "http://localhost:4200", "*");
+                    .WithOrigins("http://localhost:4200", "http://localhost:4200", "http://192.168.1.203:8100");
             });
 
             app.UseAuthorization();

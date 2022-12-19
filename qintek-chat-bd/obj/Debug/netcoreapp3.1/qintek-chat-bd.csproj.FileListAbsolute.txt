@@ -11,3 +11,16 @@ D:\projects\qintek-chat-socket\qintek-chat-bd\obj\Debug\netcoreapp3.1\qintek-cha
 D:\projects\qintek-chat-socket\qintek-chat-bd\obj\Debug\netcoreapp3.1\qintek-chat-bd.dll
 D:\projects\qintek-chat-socket\qintek-chat-bd\obj\Debug\netcoreapp3.1\qintek-chat-bd.pdb
 D:\projects\qintek-chat-socket\qintek-chat-bd\obj\Debug\netcoreapp3.1\qintek-chat-bd.genruntimeconfig.cache
+C:\Users\jvega-windows\Desktop\projects\app-chat-socket-netcore\qintek-chat-bd\bin\Debug\netcoreapp3.1\qintek-chat-bd.deps.json
+C:\Users\jvega-windows\Desktop\projects\app-chat-socket-netcore\qintek-chat-bd\bin\Debug\netcoreapp3.1\qintek-chat-bd.runtimeconfig.json
+C:\Users\jvega-windows\Desktop\projects\app-chat-socket-netcore\qintek-chat-bd\bin\Debug\netcoreapp3.1\qintek-chat-bd.runtimeconfig.dev.json
+C:\Users\jvega-windows\Desktop\projects\app-chat-socket-netcore\qintek-chat-bd\bin\Debug\netcoreapp3.1\qintek-chat-bd.dll
+C:\Users\jvega-windows\Desktop\projects\app-chat-socket-netcore\qintek-chat-bd\bin\Debug\netcoreapp3.1\qintek-chat-bd.pdb
+C:\Users\jvega-windows\Desktop\projects\app-chat-socket-netcore\qintek-chat-bd\obj\Debug\netcoreapp3.1\qintek-chat-bd.csproj.AssemblyReference.cache
+C:\Users\jvega-windows\Desktop\projects\app-chat-socket-netcore\qintek-chat-bd\obj\Debug\netcoreapp3.1\qintek-chat-bd.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jvega-windows\Desktop\projects\app-chat-socket-netcore\qintek-chat-bd\obj\Debug\netcoreapp3.1\qintek-chat-bd.AssemblyInfoInputs.cache
+C:\Users\jvega-windows\Desktop\projects\app-chat-socket-netcore\qintek-chat-bd\obj\Debug\netcoreapp3.1\qintek-chat-bd.AssemblyInfo.cs
+C:\Users\jvega-windows\Desktop\projects\app-chat-socket-netcore\qintek-chat-bd\obj\Debug\netcoreapp3.1\qintek-chat-bd.csproj.CoreCompileInputs.cache
+C:\Users\jvega-windows\Desktop\projects\app-chat-socket-netcore\qintek-chat-bd\obj\Debug\netcoreapp3.1\qintek-chat-bd.dll
+C:\Users\jvega-windows\Desktop\projects\app-chat-socket-netcore\qintek-chat-bd\obj\Debug\netcoreapp3.1\qintek-chat-bd.pdb
+C:\Users\jvega-windows\Desktop\projects\app-chat-socket-netcore\qintek-chat-bd\obj\Debug\netcoreapp3.1\qintek-chat-bd.genruntimeconfig.cache

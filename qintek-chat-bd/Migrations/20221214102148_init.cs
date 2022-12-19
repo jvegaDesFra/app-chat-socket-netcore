@@ -4,7 +4,7 @@ using MySql.EntityFrameworkCore.Metadata;
 
 namespace qintek_chat_bd.Migrations
 {
-    public partial class initial : Migration
+    public partial class init : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -32,7 +32,8 @@ namespace qintek_chat_bd.Migrations
                         .Annotation("MySQL:ValueGenerationStrategy", MySQLValueGenerationStrategy.IdentityColumn),
                     message = table.Column<string>(type: "text", nullable: true),
                     userID = table.Column<int>(type: "int", nullable: false),
-                    group = table.Column<byte[]>(type: "varbinary(16)", nullable: false)
+                    group = table.Column<byte[]>(type: "varbinary(16)", nullable: false),
+                    readed = table.Column<bool>(type: "tinyint(1)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -49,7 +50,8 @@ namespace qintek_chat_bd.Migrations
                     name = table.Column<string>(type: "varchar(500)", maxLength: 500, nullable: true),
                     nick = table.Column<string>(type: "varchar(500)", maxLength: 500, nullable: true),
                     dateLogged = table.Column<DateTimeOffset>(type: "timestamp", nullable: false),
-                    connectionId = table.Column<string>(type: "varchar(500)", maxLength: 500, nullable: true)
+                    connectionId = table.Column<string>(type: "varchar(500)", maxLength: 500, nullable: true),
+                    messages = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {

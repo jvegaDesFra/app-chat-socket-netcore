@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\projects\\qintek-chat-socket\\qintek-chat-bd\\qintek-chat-bd.csproj": {}
+    "C:\\Users\\jvega-windows\\Desktop\\projects\\app-chat-socket-netcore\\qintek-chat-bd\\qintek-chat-bd.csproj": {}
   },
   "projects": {
-    "D:\\projects\\qintek-chat-socket\\qintek-chat-bd\\qintek-chat-bd.csproj": {
+    "C:\\Users\\jvega-windows\\Desktop\\projects\\app-chat-socket-netcore\\qintek-chat-bd\\qintek-chat-bd.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\projects\\qintek-chat-socket\\qintek-chat-bd\\qintek-chat-bd.csproj",
+        "projectUniqueName": "C:\\Users\\jvega-windows\\Desktop\\projects\\app-chat-socket-netcore\\qintek-chat-bd\\qintek-chat-bd.csproj",
         "projectName": "qintek-chat-bd",
-        "projectPath": "D:\\projects\\qintek-chat-socket\\qintek-chat-bd\\qintek-chat-bd.csproj",
-        "packagesPath": "C:\\Users\\jvega\\.nuget\\packages\\",
-        "outputPath": "D:\\projects\\qintek-chat-socket\\qintek-chat-bd\\obj\\",
+        "projectPath": "C:\\Users\\jvega-windows\\Desktop\\projects\\app-chat-socket-netcore\\qintek-chat-bd\\qintek-chat-bd.csproj",
+        "packagesPath": "C:\\Users\\jvega-windows\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jvega-windows\\Desktop\\projects\\app-chat-socket-netcore\\qintek-chat-bd\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\jvega\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\jvega-windows\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -57,7 +57,8 @@
             "net47",
             "net471",
             "net472",
-            "net48"
+            "net48",
+            "net481"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -66,7 +67,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.413\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }

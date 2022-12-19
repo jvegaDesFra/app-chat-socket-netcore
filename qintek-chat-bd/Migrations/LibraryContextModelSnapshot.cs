@@ -54,6 +54,9 @@ namespace qintek_chat_bd.Migrations
                     b.Property<string>("message")
                         .HasColumnType("text");
 
+                    b.Property<bool>("readed")
+                        .HasColumnType("tinyint(1)");
+
                     b.Property<int>("userID")
                         .HasColumnType("int");
 
@@ -76,6 +79,9 @@ namespace qintek_chat_bd.Migrations
                         .HasColumnType("timestamp");
 
                     b.Property<int>("id")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("messages")
                         .HasColumnType("int");
 
                     b.Property<string>("name")
